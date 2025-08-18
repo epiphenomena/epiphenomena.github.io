@@ -3,7 +3,7 @@ title: Epiphenomena
 layout: default
 ---
 
-Check out my [projects](/projects) or [contact me](/contact).
+I'm looking for [work](resume_2025_08_p.pdf)
 
 # Latest Posts
 
