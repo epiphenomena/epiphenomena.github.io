@@ -1,6 +1,6 @@
 ---
 title: Epiphenomena
-layout: default
+layout: home
 ---
 
 I'm looking for [work](resume_2025_08_p.pdf)
