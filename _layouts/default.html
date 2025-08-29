@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body class="antialiased">
+
+    {% include header.html %}
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {{ content }}
+    </main>
+
+    {% include footer.html %}
+
+    <script>
+        // Matrix effect script
+        const canvas = document.getElementById('matrix-canvas');
+        // Ensure canvas exists before trying to use it
+        if (canvas) {
+            const ctx = canvas.getContext('2d');
+
+            let w = canvas.width = window.innerWidth;
+            let h = canvas.height = document.querySelector('header').offsetHeight;
+
+            window.addEventListener('resize', () => {
+                w = canvas.width = window.innerWidth;
+                h = canvas.height = document.querySelector('header').offsetHeight;
+                init();
+            });
+
+            const cols = Math.floor(w / 20) + 1;
+            let ypos = Array(cols).fill(0);
+
+            ctx.fillStyle = '#0d1117';
+            ctx.fillRect(0, 0, w, h);
+
+            function matrix() {
+                ctx.fillStyle = 'rgba(13, 17, 23, 0.1)';
+                ctx.fillRect(0, 0, w, h);
+
+                ctx.fillStyle = '#10b981';
+                ctx.font = '15pt monospace';
+
+                ypos.forEach((y, ind) => {
+                    const text = String.fromCharCode(Math.random() * 128);
+                    const x = ind * 20;
+                    ctx.fillText(text, x, y);
+
+                    if (y > 100 + Math.random() * 10000) {
+                        ypos[ind] = 0;
+                    } else {
+                        ypos[ind] = y + 20;
+                    }
+                });
+            }
+
+            function init() {
+                ypos = Array(cols).fill(0);
+                ctx.fillStyle = '#0d1117';
+                ctx.fillRect(0, 0, w, h);
+            }
+
+            init();
+            setInterval(matrix, 50);
+        }
+    </script>
+
+</body>
+</html>

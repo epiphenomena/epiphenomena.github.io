@@ -1,3 +1,23 @@
-remote_theme: pages-themes/tactile@v0.2.0
+title: Epiphenomena
+
+url: "https://epiphenomena.github.io/"
+
+author:
+  name: Clint
+  bio: "An experienced professional, and full-stack developer. I use a deep understanding of the entire tech stack to engineer solutions, simplify processes, and improve robustness."
+  github_username: epiphenomena
+  linkedin_username: clint-calhoun-957699319
+  skills:
+    - Python
+    - Numpy/Pandas
+    - JavaScript
+    - Generative AI
+    - Attorney
+    - Series 65
+    - Statistics
+
+# Build settings
+markdown: kramdown
+theme: minima # While we've created a custom theme, Jekyll needs a theme specified.
 plugins:
-- jekyll-remote-theme
+  - jekyll-feed

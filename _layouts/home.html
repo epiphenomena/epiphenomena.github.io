@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+
+    <!-- Blog Posts Section -->
+    <div class="lg:col-span-2">
+        <h2 class="text-3xl font-bold text-white mb-8 border-b-2 border-gray-700 pb-2">Latest Posts</h2>
+
+        {% for post in site.posts %}
+        <article class="post-card bg-gray-900 rounded-lg shadow-lg overflow-hidden mb-8 border border-gray-800">
+            <div class="p-6">
+                <p class="text-sm text-gray-400 font-mono">{{ post.date | date: "%B %d, %Y" }}</p>
+                <h3 class="text-2xl font-bold mt-2"><a href="{{ post.url | relative_url }}" class="text-green-400 hover:text-green-300 transition duration-300">{{ post.title }}</a></h3>
+                <p class="mt-4 text-gray-300 leading-relaxed">
+                    {{ post.excerpt }}
+                </p>
+                <a href="{{ post.url | relative_url }}" class="inline-block mt-6 font-semibold text-green-400 hover:text-green-300 transition duration-300">Read More &rarr;</a>
+            </div>
+        </article>
+        {% endfor %}
+
+    </div>
+
+    <!-- Sidebar Section -->
+    <aside>
+        {% include sidebar.html %}
+    </aside>
+
+</div>

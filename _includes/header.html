@@ -1,0 +1,15 @@
+<header class="relative text-white text-center py-24 md:py-32 overflow-hidden">
+    <canvas id="matrix-canvas" class="matrix-canvas"></canvas>
+    <div class="header-overlay"></div>
+    <div class="relative z-10">
+        <h1 class="text-4xl md:text-6xl font-bold font-mono tracking-wider"><a href="{{ "/" | relative_url }}">{{ site.title }}</a></h1>
+        <p class="mt-4 text-lg md:text-xl text-gray-300">{{ site.description }}</p>
+        <nav class="mt-8">
+            <ul class="flex justify-center space-x-6 md:space-x-8 text-lg">
+                <li><a href="{{ "/" | relative_url }}" class="nav-link">Home</a></li>
+                <li><a href="{{ "/about.html" | relative_url }}" class="nav-link">About</a></li>
+                <!-- Add other navigation links here -->
+            </ul>
+        </nav>
+    </div>
+</header>
