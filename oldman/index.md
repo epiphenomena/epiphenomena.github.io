@@ -1,5 +1,6 @@
 ---
 title: The Weight of Still Water
+layout: page
 ---
 
 <!--
